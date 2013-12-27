@@ -1,0 +1,117 @@
+<html>
+  <head>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
+    <!-- http://i.imgur.com/svCFofX.jpg -->
+    
+    <script>
+      $(function() {
+
+        $('#add_to_do').submit(function(){
+          $('#content').append("<li class='to_do'><form class='checkbox'><input type='checkbox'><span>" + $('#new_to_do').val() + "</span><a class='delete'>x</a></form></li>");
+          this.reset();
+           return false;
+        });  
+          
+        $('#add_to_do').submit(function(){
+         console.log($(this).serialize());
+        }); 
+          
+        return false;
+      }); 
+      
+    </script>
+
+    <style>
+      body {
+        background-color:#CCCCCC ;
+        font-family: arial;
+        color: #585858; 
+      }  
+     ul {
+        list-style-type:none;
+        margin: 0 -20px;
+        list-style-position: inside;
+      }
+      li{
+        line-height: 2.5em;
+        border-bottom: 1px solid black;
+      }  
+
+      h1 {
+        margin: 20px auto;
+        color: #484848;
+      } 
+      a {
+        float: right;
+        text-decoration: none;
+        margin-right: 10px;
+      } 
+      #big_wrap {
+        width: 350px;
+        margin: 30px auto;
+      }  
+
+      #wrapper {
+        border: 1px solid black;
+        border-radius: 15px;
+        padding: 10px;
+        background-color: white;
+      }  
+      #content {
+        margin-bottom: 15px;
+        padding: 25px;
+      }
+
+      #new_to_do {
+        width: 85%;
+        height: 25px;
+      }  
+      #add {
+        background-color: #cccccc;
+        border-radius: 40px;
+      } 
+      # add_to_do {
+        border-top: 1px solid grey;
+      }  
+      .to_do {
+        border:1px;
+      }
+      .checkbox {
+        display: inline;
+        width: 300px;
+
+      }  
+      .delete {
+        float:right;
+        margin-right:5px;
+        color: red;
+      }
+      
+    </style>
+  </head>
+
+  <body>   
+    <div id="big_wrap">
+      <h1>To Do -></h1> 
+       <div id ="wrapper">
+        <small><a href="test.html">clear all</a></small>
+        <ul id="content">     
+    <!-- this is where content shows -->
+        </ul>    
+  
+      <form id="add_to_do">
+        <input type="text" id="new_to_do" >
+        <input type="submit" value="Add" id="add">
+      </form> 
+    </div>     
+    <div id="notes">
+      <p><small>Quick hour test on JQuery - no back end. Javascript, HTML/CSS only.
+      </small></p>
+    </div>
+      
+    </div>    
+
+    
+  </body>
+</html>
