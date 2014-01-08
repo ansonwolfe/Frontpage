@@ -199,8 +199,11 @@ p{
 	color: black;
 }
 #contactLink {
-	width: 30%;
+	width: 40%;
 	margin-right: 10px;
+}
+i:before {
+  cursor: pointer;
 }
 /* targeted elements */
 /*

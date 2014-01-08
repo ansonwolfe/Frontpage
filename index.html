@@ -4,7 +4,6 @@
 	<meta charset="UTF-8">
 	<link rel="stylesheet" type="text/css" href="stylesheets/foundation.css">
 	<link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
-
 	<link rel="stylesheet" href="stylesheets/style.css" type="text/css" />
 	<link rel="stylesheet" href="stylesheets/fractionslider.css">
 	<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
@@ -14,32 +13,9 @@
  	<script src="js/fractionslider/jquery.fractionslider.js"></script>	
 	<script src="js/fractionslider/main.js"></script> 
 	<script src="js/parallax.js"></script>
-	<!-- for contact form -->
-	<script src="js/contact_js/jquery.placeholder.js"></script>
-	<script src="js/contact_js/modernizr-min.js"></script>
-	<script src="js/contact_js/jquery.form.js"></script>
-	<script src="js/contact_js/jquery.validate.js"></script>
-	
-	<script>
-		if (!Modernizr.input.placeholder){
-		 $('input[placeholder], textarea[placeholder]').placeholder();
-		}
-	</script>
-	<script>
-		$(function(){
-		$('#contact').validate({
-		submitHandler: function(form) {
-		$(form).ajaxSubmit({
-		url: 'process.php',
-		success: function() {
-		$('#contact').hide();
-		$('#contact-form').append("<p class='thanks'>Thanks! Your request has been sent.</p>")
-		}
-		});
-		}
-		});
-		});
-	</script>
+
+ 	<script src="js/contact_js/modernizr-min.js"></script>
+
 
 	<title>A Little Pep</title>
 </head>
@@ -94,9 +70,9 @@
 	    <!-- Left Nav Section -->
 	    <ul class="left">
 	      <li class="divider"></li>
-	      <li class="active"><a href="#" data-reveal-id="About"><i class="fa fa-bookmark"></i>  Welcome</a></li>
+	      <li class="active"><a href="#" data-reveal-id="About"><i class="fa fa-bookmark"></i>  Hello.</a></li>
 		  <li class="divider"></li>
-	      <!-- <li class="has-dropdown"><a href="#">Some Old Projects</a>
+	     <li class="has-dropdown"><a href="#">Some Old Projects</a>
 
 	        <ul class="dropdown">
 	          <li class="has-dropdown"><a href="#">Ruby on Rails</a>
@@ -115,10 +91,10 @@
 	            </ul>
 	          </li>
 	          <li class="divider"></li>
-	          <li><a href="#">See all &rarr;</a></li>
+<!-- 	          <li><a href="#">See all &rarr;</a></li> -->
 	        </ul>
 	      </li>
-	      <li class="divider"></li> -->
+	      <li class="divider"></li> 
 	    </ul>
 
 	    <!-- Right Nav Section -->
@@ -129,6 +105,7 @@
 	      <li class="divider hide-for-small"></li>
 	      <li><a href="http://www.linkedin.com/in/bonnielai"><i class="fa fa-linkedin"></i></a></li>
 	      <li class="divider hide-for-small"></li>
+	       	<li><a href=""data-reveal-id="About"class=""><i class="fa fa-coffee"> </i></a></li>
 	   
 	    </ul>
 	  </section>
@@ -141,8 +118,8 @@
 <div id="slide3"  data-speed="4" data-type="background">
 	<div class="row slide_inside">
 	  <div id="content" class="small-11 small-centered columns">
-	  	<h2>You will find a new day.</h2>
-		</div>  	  	  	  	
+	  	<a href="#" data-reveal-id="About"><h2>You will find a new day.</h2></a>
+	  </div>  	  	  	  	
 	</div> 
 </div>
 <!-- modal -->
@@ -150,9 +127,9 @@
 		<a class="close-reveal-modal">×</a>
 		<h4>Hello.
 		My name is Bonnie.  I'm learning to become a developer. </h4>
-		<h5>Are you looking for a tenacious, self-starter who is ready to learn? </h5>
-<!-- 		<a href="http://www.linkedin.com/in/bonnielai"data-reveal-id="contactModal"class="radius button"><i class="fa fa-coffee"> </i> Let's Chat.</a> -->
-		<a href="http://www.linkedin.com/in/bonnielai" class="radius button"><i class="fa fa-coffee"> </i> Let's Chat.</a>
+		<h5>Are you looking for a tenacious, self-starter who can hit the ground running, and is never afraid to learn something new? </h5>
+ 		<a href="http://www.linkedin.com/in/bonnielai"data-reveal-id="contactModal"class="radius button"><i class="fa fa-coffee"> </i> Let's Chat.</a>
+<!-- 		<a href="http://www.linkedin.com/in/bonnielai" class="radius button"><i class="fa fa-coffee"> </i> Let's Chat.</a> -->
 		<div id="Links">
 			<a href="https://github.com/ansonwolfe"><i class="fa fa-github-square fa-2x"></i></a>
 			<a href="http://www.linkedin.com/in/bonnielai"><i class="fa fa-linkedin-square fa-2x"></i></a>
@@ -167,33 +144,25 @@
 			<a href="http://www.linkedin.com/in/bonnielai"><i class="fa fa-linkedin-square fa-2x"></i> Find me on LinkedIn.</a>
 		    </fieldset>
 		</div>
+		<!-- Do not change the code! -->
+		<fieldset>
 
-		<!-- <form id="contact" method="post" action="">
-			<fieldset>    
-			 
-			<label for="name">Name</label>
-			<input type="text" name="name" placeholder="name">
-			 
-			<label for="email">E-mail</label>
-			<input type="email" name="email" placeholder="email">
-			 
-			<label for="phone">Phone</label>
-			<input type="text" name="phone" placeholder="phone">
-			 
-			<label for="message">Question/Comment</label>
-			<textarea name="message" placeholder="your message"></textarea>
-			 
-			<input type="submit" name="submit" id="submit" value="Send Message" class="radius button" />
-			 
-			</fieldset>
-		</form> -->
-
+			<a id="foxyform_embed_link_510580"></a>
+			<script type="text/javascript">
+			(function(d, t){
+			   var g = d.createElement(t),
+			       s = d.getElementsByTagName(t)[0];
+			   g.src = "http://www.foxyform.com/js.php?id=510580&sec_hash=f1f754a6c4a&width=350px";
+			   s.parentNode.insertBefore(g, s);
+			}(document, "script"));
+			</script>
+		</fieldset>
 	</div>	
 
 	<script>
-	document.write('<script src=' +
-	('__proto__' in {} ? 'js/vendor/zepto' : 'js/vendor/jquery') +
-	'.js><\/script>')
+		document.write('<script src=' +
+		('__proto__' in {} ? 'js/vendor/zepto' : 'js/vendor/jquery') +
+		'.js><\/script>')
 	</script>
 </body>
 
