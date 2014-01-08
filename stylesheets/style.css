@@ -195,6 +195,13 @@ p{
 	color: black;
 }
 
+#contactModal i {
+	color: black;
+}
+#contactLink {
+	width: 30%;
+	margin-right: 10px;
+}
 /* targeted elements */
 /*
 #s1:target ~ #wrap { top:0px; }

@@ -14,7 +14,32 @@
  	<script src="js/fractionslider/jquery.fractionslider.js"></script>	
 	<script src="js/fractionslider/main.js"></script> 
 	<script src="js/parallax.js"></script>
-
+	<!-- for contact form -->
+	<script src="js/contact_js/jquery.placeholder.js"></script>
+	<script src="js/contact_js/modernizr-min.js"></script>
+	<script src="js/contact_js/jquery.form.js"></script>
+	<script src="js/contact_js/jquery.validate.js"></script>
+	
+	<script>
+		if (!Modernizr.input.placeholder){
+		 $('input[placeholder], textarea[placeholder]').placeholder();
+		}
+	</script>
+	<script>
+		$(function(){
+		$('#contact').validate({
+		submitHandler: function(form) {
+		$(form).ajaxSubmit({
+		url: 'process.php',
+		success: function() {
+		$('#contact').hide();
+		$('#contact-form').append("<p class='thanks'>Thanks! Your request has been sent.</p>")
+		}
+		});
+		}
+		});
+		});
+	</script>
 
 	<title>A Little Pep</title>
 </head>
@@ -69,7 +94,8 @@
 	    <!-- Left Nav Section -->
 	    <ul class="left">
 	      <li class="divider"></li>
-
+	      <li class="active"><a href="#" data-reveal-id="About"><i class="fa fa-bookmark"></i>  Welcome</a></li>
+		  <li class="divider"></li>
 	      <!-- <li class="has-dropdown"><a href="#">Some Old Projects</a>
 
 	        <ul class="dropdown">
@@ -97,9 +123,13 @@
 
 	    <!-- Right Nav Section -->
 	    <ul class="right">
-	      <li class="active"><a href="#" data-reveal-id="About">Hello</a></li>
+
 	      <li class="divider hide-for-small"></li>
-	      <li><a href="">  <i class="fa fa-coffee">Want to chat?</i> <i class="fa fa-comment"></i></a></li>
+	      <li><a href="https://github.com/ansonwolfe"><i class="fa fa-github-alt"></i></a></li>
+	      <li class="divider hide-for-small"></li>
+	      <li><a href="http://www.linkedin.com/in/bonnielai"><i class="fa fa-linkedin"></i></a></li>
+	      <li class="divider hide-for-small"></li>
+	   
 	    </ul>
 	  </section>
 	</nav>
@@ -117,16 +147,48 @@
 </div>
 <!-- modal -->
 	<div id="About" class="reveal-modal" data-reveal >
+		<a class="close-reveal-modal">×</a>
 		<h4>Hello.
 		My name is Bonnie.  I'm learning to become a developer. </h4>
 		<h5>Are you looking for a tenacious, self-starter who is ready to learn? </h5>
-		<a href="#"class="radius button"><i class="fa fa-coffee"> </i> Let's Chat.</a>
+<!-- 		<a href="http://www.linkedin.com/in/bonnielai"data-reveal-id="contactModal"class="radius button"><i class="fa fa-coffee"> </i> Let's Chat.</a> -->
+		<a href="http://www.linkedin.com/in/bonnielai" class="radius button"><i class="fa fa-coffee"> </i> Let's Chat.</a>
 		<div id="Links">
 			<a href="https://github.com/ansonwolfe"><i class="fa fa-github-square fa-2x"></i></a>
-			<a href="http://www.linkedin.com/in/bonnielai"><i class="fa fa-linkedin fa-2x"></i></a>
+			<a href="http://www.linkedin.com/in/bonnielai"><i class="fa fa-linkedin-square fa-2x"></i></a>
 		</div>
 
 	</div>
+
+	<div id="contactModal" class="reveal-modal" data-reveal>
+		<a class="close-reveal-modal">×</a>
+		<div class="left" id="contactLink">
+			<fieldset>
+			<a href="http://www.linkedin.com/in/bonnielai"><i class="fa fa-linkedin-square fa-2x"></i> Find me on LinkedIn.</a>
+		    </fieldset>
+		</div>
+
+		<!-- <form id="contact" method="post" action="">
+			<fieldset>    
+			 
+			<label for="name">Name</label>
+			<input type="text" name="name" placeholder="name">
+			 
+			<label for="email">E-mail</label>
+			<input type="email" name="email" placeholder="email">
+			 
+			<label for="phone">Phone</label>
+			<input type="text" name="phone" placeholder="phone">
+			 
+			<label for="message">Question/Comment</label>
+			<textarea name="message" placeholder="your message"></textarea>
+			 
+			<input type="submit" name="submit" id="submit" value="Send Message" class="radius button" />
+			 
+			</fieldset>
+		</form> -->
+
+	</div>	
 
 	<script>
 	document.write('<script src=' +
